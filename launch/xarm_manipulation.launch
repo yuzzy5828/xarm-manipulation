@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="realsense" default="true"/>
+    <!-- realsense camera -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch" if="$(arg realsense)">
+        <arg name="align_depth" value="true"/>
+    </include>
+</launch>
